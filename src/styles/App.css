@@ -1,9 +1,48 @@
 .App {
   text-align: center;
+  color: #8C8B81;
 }
 
+.body-container {
+  background-color: #013440;
+  color: white;
+  min-height: calc(100vh - 215px);
+}
 .stock-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  background-color: #013440;
+}
+.stock-img {
+  width: 80%;
+  margin: 0;
+  float: left;
+  border: 5px solid white;
+}
+.item-container {
+  flex: 1 1 40vw;
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  background-color: #8C8B81;
+  border: 5px solid #59554C;
+  /*border-radius: 5px;*/
+  /*text-align: center;*/
+  color: white;
+}
+.item-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 4px black;
+}
+.item-price {
+  line-height: 2em;
+  font-size: 1.5em;
+  color: red;
+  background-color: #59554C;
+  text-decoration: underline;
+}
+.item-sub-container {
+  flex: 1 0 50%;
 }

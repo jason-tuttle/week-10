@@ -16,7 +16,7 @@ class Acoustic extends Component {
   render() {
     const {items} = this.state;
     return (
-      <div>
+      <div className='body-container'>
         <DisplayItems items={items}/>
       </div>
     );

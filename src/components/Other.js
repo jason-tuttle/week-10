@@ -17,7 +17,7 @@ class Other extends Component {
   render() {
     const {items} = this.state;
     return (
-      <DisplayItems items={items} />
+      <div className='body-container'><DisplayItems items={items} /></div>
     );
   }
 }

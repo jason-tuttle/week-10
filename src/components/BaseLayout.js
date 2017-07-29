@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import { Nav, NavItem, Navbar, PageHeader} from 'react-bootstrap';
-import {NavLink, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import '../styles/App.css'
 
 class BaseLayout extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    };
-  }
-
   render() {
     return (
       <div>
-        <PageHeader>Fret Board: <small>Frets & Strings</small></PageHeader>
-        <Navbar>
+        <PageHeader style={
+          {
+            color: 'white',
+            backgroundColor: '#013440',
+            margin: 0,
+            padding: '50px 20px 20px 20px'
+          }
+        }>Fret Board: <small>Frets & Strings</small></PageHeader>
+        <Navbar inverse style={{margin: '2px 0'}}>
           <Navbar.Header>
-            <Navbar.Brand><NavLink exact to="/" activeStyle={styles.activeNav}>Home</NavLink></Navbar.Brand>
+            <Navbar.Brand><NavLink exact to="/" >Home</NavLink></Navbar.Brand>
           </Navbar.Header>
           <Nav>
             <NavItem eventKey={1} href="/acoustic">Acoustic</NavItem>
@@ -36,15 +34,6 @@ class BaseLayout extends Component {
       </div>
     );
   }
-}
-
-const styles = {
-  activeNav: {
-    borderRadius: '5px 5px 0 0',
-    backgroundColor: 'white',
-    color: 'blue',
-    fontWeight: 'bold'
-  },
 }
 
 export default BaseLayout;
