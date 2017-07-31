@@ -14,7 +14,8 @@ export default class DisplayItems extends Component {
               className="stock-img" />
             </div>
             <div className='item-sub-container' >
-              <p className="item-title">{item.make} {item.model}</p>
+              <p className="item-title">{item.make}</p>
+              <p className="item-subtitle">{item.model}</p>
               <p>{item.color}</p>
               <p className="item-price">${`${item.price}`}</p>
             </div>
