@@ -7,6 +7,7 @@ import BaseLayout from './components/BaseLayout';
 import About from './components/About';
 import Acoustic from './components/Acoustic';
 import Bass from './components/Bass';
+import Cart from './components/Cart';
 import Contact from './components/Contact';
 import Electric from './components/Electric';
 import Other from './components/Other';
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path="/about" component={About} />
         <Route path="/acoustic" component={Acoustic} />
         <Route path="/bass" component={Bass} />
+        <Route path="/cart" component={Cart} />
         <Route path="/contact" component={Contact} />
         <Route path="/electric" component={Electric} />
         <Route path="/other" component={Other} />

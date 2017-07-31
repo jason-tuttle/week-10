@@ -7,11 +7,18 @@ export default class DisplayItems extends Component {
     return (
       <div className='stock-container'>
         {items.map((item, index) => {
-          return (<div className="item-container" key={index}>
+          return (<div className="item-container"
+              style={{
+                backgroundImage: `url(${item.img})`,
+                backgroundPosition: 'bottom center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
+              }}
+              key={index}>
             <div className='item-sub-container'>
               <img src={item.img}
-              alt={`${item.make},${item.model} ${item.color}`}
-              className="stock-img" />
+                alt={`${item.make},${item.model} ${item.color}`}
+                className="stock-img" />
             </div>
             <div className='item-sub-container' >
               <p className="item-title">{item.make}</p>

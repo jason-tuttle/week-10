@@ -1,6 +1,14 @@
+h1 {
+  font-size: 4em;
+}
+h1 > small {
+  color: white;
+}
+
 .App {
   text-align: center;
   color: #8C8B81;
+  min-height: calc(100vh - 200px);
 }
 
 .body-container {
@@ -43,10 +51,11 @@
 .item-price {
   line-height: 2em;
   font-size: 1.5em;
-  color: red;
-  background-color: #59554C;
+  color: darkred;
+  /*background-color: #59554C;*/
   text-decoration: underline;
 }
 .item-sub-container {
+  background-color: rgba(140, 139, 129, 0.5);
   flex: 1 0 50%;
 }
