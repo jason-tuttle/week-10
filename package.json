@@ -2,6 +2,7 @@
   "name": "week-10",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://jason-tuttle.github.io/week-10",
   "dependencies": {
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",

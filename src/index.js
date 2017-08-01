@@ -21,7 +21,7 @@ const {cart} = store.getState();
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename='/week-10'>
       <BaseLayout cart={cart}>
         <Switch>
           <Route exact path="/" component={App} />
