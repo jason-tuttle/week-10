@@ -13,7 +13,10 @@ export default function cartApp(state = initialState, action) {
         cart: [...state.cart, action.item]
       };
     case REMOVE_ITEM:
-      return state.filter(cartItem => cartItem.id !== action.item.id);
+      return {
+        ...state,
+        cart: state.cart.filter(cartItem => cartItem.id !== action.item.id)
+      };
     default:
       return state;
   }

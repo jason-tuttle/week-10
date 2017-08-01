@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import backgroundImg from '../images/guitar-3.jpg';
+
 import '../styles/App.css';
 
 const backgroundStyle = {
