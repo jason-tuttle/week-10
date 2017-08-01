@@ -17,11 +17,12 @@ import { createStore } from 'redux';
 import cartApp from './reducers/reducers';
 
 let store = createStore(cartApp, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const {cart} = store.getState();
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <BaseLayout>
+      <BaseLayout cart={cart}>
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/about" component={About} />

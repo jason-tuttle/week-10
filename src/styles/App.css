@@ -7,8 +7,9 @@ h1 > small {
 
 .App {
   text-align: center;
-  color: #8C8B81;
+  color: white;
   min-height: calc(100vh - 200px);
+  font-size: 20px;
 }
 
 .body-container {
@@ -70,4 +71,9 @@ h1 > small {
   background-color: white;
   color: black;
   text-decoration: none;
+}
+
+.logo-text {
+  font-family: Unlock, serif;
+  font-size: 2em;
 }
