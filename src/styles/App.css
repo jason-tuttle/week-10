@@ -59,3 +59,11 @@ h1 > small {
   background-color: rgba(140, 139, 129, 0.5);
   flex: 1 0 50%;
 }
+.nav-link {
+  line-height: 1.5em;
+  margin: 0 5px;
+  padding: 5px 10px;
+  position: relative;
+  top: 15px;
+
+}

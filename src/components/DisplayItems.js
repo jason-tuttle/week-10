@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
+import { bindActionCreators } from 'redux';
+import { connect} from 'react-redux';
+import {AddItem} from '../actions/actionTypes';
 
 
-export default class DisplayItems extends Component {
+class DisplayItems extends Component {
   render() {
-    const {items} = this.props;
+    const {items, AddItem} = this.props;
     return (
       <div className='stock-container'>
         {items.map((item, index) => {
@@ -25,6 +29,7 @@ export default class DisplayItems extends Component {
               <p className="item-subtitle">{item.model}</p>
               <p>{item.color}</p>
               <p className="item-price">${`${item.price}`}</p>
+              <Button bsStyle='success' onClick={() => AddItem(item)}>Add To Cart</Button>
             </div>
           </div>)
         })}
@@ -32,3 +37,4 @@ export default class DisplayItems extends Component {
     )
   }
 }
+export default connect(null, dispatch => bindActionCreators({AddItem}, dispatch))(DisplayItems);

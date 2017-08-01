@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+
 import {ADD_ITEM, REMOVE_ITEM, AddItem, RemoveItem} from '../actions/actionTypes';
 
 const initialState = {
@@ -8,9 +8,12 @@ const initialState = {
 export default function cartApp(state = initialState, action) {
   switch(action.type) {
     case ADD_ITEM:
-      return [...state, {action.item}]
+      return {
+        ...state,
+        cart: [...state.cart, action.item]
+      };
     case REMOVE_ITEM:
-      return state.filter(cartItem => cartItem.id !== item.id);
+      return state.filter(cartItem => cartItem.id !== action.item.id);
     default:
       return state;
   }

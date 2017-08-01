@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux'
 import './styles/index.css';
 import App from './components/App';
 import BaseLayout from './components/BaseLayout';
@@ -12,22 +13,28 @@ import Contact from './components/Contact';
 import Electric from './components/Electric';
 import Other from './components/Other';
 import registerServiceWorker from './registerServiceWorker';
+import { createStore } from 'redux';
+import cartApp from './reducers/reducers';
+
+let store = createStore(cartApp, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
-  <BrowserRouter>
-    <BaseLayout>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/about" component={About} />
-        <Route path="/acoustic" component={Acoustic} />
-        <Route path="/bass" component={Bass} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/electric" component={Electric} />
-        <Route path="/other" component={Other} />
-      </Switch>
-    </BaseLayout>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <BaseLayout>
+        <Switch>
+          <Route exact path="/" component={App} />
+          <Route path="/about" component={About} />
+          <Route path="/acoustic" component={Acoustic} />
+          <Route path="/bass" component={Bass} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/electric" component={Electric} />
+          <Route path="/other" component={Other} />
+        </Switch>
+      </BaseLayout>
+    </BrowserRouter>
+  </Provider>
 
   , document.getElementById('root'));
 
